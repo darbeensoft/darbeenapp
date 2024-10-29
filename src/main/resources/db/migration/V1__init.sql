@@ -1,12 +1,8 @@
-
-CREATE TABLE usuario (
-    id BIGSERIAL PRIMARY KEY,
-    nombre VARCHAR(255),
-    email VARCHAR(255)
-);
-
-CREATE TABLE producto (
-    id BIGSERIAL PRIMARY KEY,
-    nombre VARCHAR(255),
-    precio DOUBLE PRECISION
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    lastname VARCHAR(100),
+    firstname VARCHAR(100),
+    country VARCHAR(100)
 );
